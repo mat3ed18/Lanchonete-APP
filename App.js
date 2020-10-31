@@ -32,23 +32,22 @@ const App = () => {
         return {uri: url}
     }
 
+    // function amountLoad() {
+    //     setTotal(total => 0);
+    //     const opcoes = [getOpcao1, getOpcao2, getOpcao3, getOpcao4, getOpcao5, getOpcao6, getOpcao7, getOpcao8, getOpcao9, getOpcao10];
+    //     const valores = [14, 5, 35, 12, 9, 4, 25, 11, 17, 8];
+
+    //     for(let i = 0; i < opcoes.length; i++){
+    //         if (opcoes[i] == true) {
+    //             setTotal(total => total + valores[i]);
+    //         } else {
+    //             // setTotal(total => total - valores[i]);
+    //         }
+    //     }
+    // }
+
     function amountLoad() {
-        setTotal(total => 0);
-        const opcoes = [getOpcao1, getOpcao2, getOpcao3, getOpcao4, getOpcao5, getOpcao6, getOpcao7, getOpcao8, getOpcao9, getOpcao10];
-        const valores = [14, 5, 35, 12, 9, 4, 25, 11, 17, 8];
-
-        for(let i = 0; i < opcoes.length; i++){
-            if (opcoes[i] == true) {
-                setTotal(total => total + valores[i]);
-            } else {
-                // setTotal(total => total - valores[i]);
-            }
-        }
-    }
-
-    function handleClick(e) {
-        // e.preventDefault();
-        amountLoad();
+        alert('ass');
     }
 
 
@@ -61,7 +60,7 @@ const App = () => {
             <View style={styles.body}>
                 <View style={styles.products}>
                     <View style={styles.product}>
-                        <CheckBox value={getOpcao1} onValueChange={setOpcao1} style={styles.pOption} onClick={handleClick}/>
+                        <CheckBox value={getOpcao1} onValueChange={setOpcao1} style={styles.pOption} handlePress={amountLoad()}/>
                         <Image style={styles.pImage} source={url("https://img.icons8.com/fluent/50/000000/hamburger.png")}/>
                         <View style={styles.pInfo}>
                             <Text style={styles.pName}>Hamburger</Text>
@@ -72,7 +71,7 @@ const App = () => {
                         </View>
                     </View>
                     <View style={styles.product}>
-                        <CheckBox value={getOpcao2} onValueChange={setOpcao2} style={styles.pOption} onClick={handleClick}/>
+                        <CheckBox value={getOpcao2} onValueChange={setOpcao2} style={styles.pOption} handlePress={amountLoad}/>
                         <Image style={styles.pImage} source={url("https://img.icons8.com/fluent/50/000000/hot-dog.png")}/>
                         <View style={styles.pInfo}>
                             <Text style={styles.pName}>Hot Dog</Text>
@@ -83,7 +82,7 @@ const App = () => {
                         </View>
                     </View>
                     <View style={styles.product}>
-                        <CheckBox value={getOpcao3} onValueChange={setOpcao3} style={styles.pOption} onClick={handleClick}/>
+                        <CheckBox value={getOpcao3} onValueChange={setOpcao3} style={styles.pOption} handlePress={amountLoad}/>
                         <Image style={styles.pImage} source={url("https://img.icons8.com/fluent/50/000000/pizza.png")}/>
                         <View style={styles.pInfo}>
                             <Text style={styles.pName}>Pizza</Text>
@@ -94,7 +93,7 @@ const App = () => {
                         </View>
                     </View>
                     <View style={styles.product}>
-                        <CheckBox value={getOpcao4} onValueChange={setOpcao4} style={styles.pOption} onClick={handleClick}/>
+                        <CheckBox value={getOpcao4} onValueChange={setOpcao4} style={styles.pOption} handlePress={amountLoad}/>
                         <Image style={styles.pImage} source={url("https://img.icons8.com/fluent/50/000000/sandwich-with-fried-egg.png")}/>
                         <View style={styles.pInfo}>
                             <Text style={styles.pName}>Pão com Ovo</Text>
@@ -105,7 +104,7 @@ const App = () => {
                         </View>
                     </View>
                     <View style={styles.product}>
-                        <CheckBox value={getOpcao5} onValueChange={setOpcao5} style={styles.pOption} onClick={handleClick}/>
+                        <CheckBox value={getOpcao5} onValueChange={setOpcao5} style={styles.pOption} handlePress={amountLoad}/>
                         <Image style={styles.pImage} source={url("https://img.icons8.com/fluent/50/000000/french-fries.png")}/>
                         <View style={styles.pInfo}>
                             <Text style={styles.pName}>Batata Frita</Text>
@@ -116,7 +115,7 @@ const App = () => {
                         </View>
                     </View>
                     <View style={styles.product}>
-                        <CheckBox value={getOpcao6} onValueChange={setOpcao6} style={styles.pOption} onClick={handleClick}/>
+                        <CheckBox value={getOpcao6} onValueChange={setOpcao6} style={styles.pOption} handlePress={amountLoad}/>
                         <Image style={styles.pImage} source={url("https://img.icons8.com/fluent/50/000000/potato-chips.png")}/>
                         <View style={styles.pInfo}>
                             <Text style={styles.pName}>Batata Chips</Text>
@@ -127,7 +126,7 @@ const App = () => {
                         </View>
                     </View>
                     <View style={styles.product}>
-                        <CheckBox value={getOpcao7} onValueChange={setOpcao7} style={styles.pOption} onClick={handleClick}/>
+                        <CheckBox value={getOpcao7} onValueChange={setOpcao7} style={styles.pOption} handlePress={amountLoad}/>
                         <Image style={styles.pImage} source={url("https://img.icons8.com/fluent/50/000000/group-of-fruits.png")}/>
                         <View style={styles.pInfo}>
                             <Text style={styles.pName}>Salada Mista</Text>
@@ -138,7 +137,7 @@ const App = () => {
                         </View>
                     </View>
                     <View style={styles.product}>
-                        <CheckBox value={getOpcao8} onValueChange={setOpcao8} style={styles.pOption} onClick={handleClick}/>
+                        <CheckBox value={getOpcao8} onValueChange={setOpcao8} style={styles.pOption} handlePress={amountLoad}/>
                         <Image style={styles.pImage} source={url("https://img.icons8.com/fluent/50/000000/cupcake.png")}/>
                         <View style={styles.pInfo}>
                             <Text style={styles.pName}>Cupcake</Text>
@@ -149,7 +148,7 @@ const App = () => {
                         </View>
                     </View>
                     <View style={styles.product}>
-                        <CheckBox value={getOpcao9} onValueChange={setOpcao9} style={styles.pOption} onClick={handleClick}/>
+                        <CheckBox value={getOpcao9} onValueChange={setOpcao9} style={styles.pOption} handlePress={amountLoad}/>
                         <Image style={styles.pImage} source={url("https://img.icons8.com/fluent/50/000000/cookies.png")}/>
                         <View style={styles.pInfo}>
                             <Text style={styles.pName}>Cookie</Text>
@@ -160,7 +159,7 @@ const App = () => {
                         </View>
                     </View>
                     <View style={styles.product}>
-                        <CheckBox value={getOpcao10} onValueChange={setOpcao10} style={styles.pOption} onClick={handleClick}/>
+                        <CheckBox value={getOpcao10} onValueChange={setOpcao10} style={styles.pOption} handlePress={amountLoad}/>
                         <Image style={styles.pImage} source={url("https://img.icons8.com/fluent/50/000000/peanuts.png")}/>
                         <View style={styles.pInfo}>
                             <Text style={styles.pName}>Amendoim</Text>
